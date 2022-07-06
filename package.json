@@ -9,8 +9,8 @@
 		"prepare": "svelte-kit sync && husky install",
 		"check": "svelte-check --tsconfig ./jsconfig.json",
 		"check:watch": "svelte-check --tsconfig ./jsconfig.json --watch",
-		"lint": "eslint   src/routes/*.{js,ts,svelte}",
-		"format": "prettier   src/**/*.{js,ts,svelte} --write"
+		"lint": "prettier --check --plugin-search-dir=. . && eslint .",
+		"format": "prettier --write --plugin-search-dir=. ."
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
